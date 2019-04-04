@@ -75,21 +75,6 @@ module.exports = ({ dir }) => ({
           pattern: /(\/\/ INCLUDE SAGA)/g,
           template: `$1\n    ...{{camelCase name}}.saga,`
         },
-        // {
-        //   type: 'add',
-        //   path: filePath(`state/${sagaName}/${sagaName}.test.js`),
-        //   templateFile: `${pathPrefix}sagaInsertSaga.hbs`
-        // },
-        // {
-        //   type: 'add',
-        //   path: filePath(`state/${sagaName}/${sagaName}.test.js`),
-        //   templateFile: `${pathPrefix}storeInsertImport.hbs`
-        // },
-        // {
-        //   type: 'add',
-        //   path: filePath(`state/${sagaName}/${sagaName}.test.js`),
-        //   templateFile: `${pathPrefix}storeInsertReducer.hbs`
-        // },
       ]
     },
   }
