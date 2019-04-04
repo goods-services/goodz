@@ -1,0 +1,18 @@
+
+export { {{pascalCase name}} as {{pascalCase name}}Vanlla };
+{{#if isConnected}}
+export default connect(
+{{#ifIn 'mapStateToProps' connectedFunctions}}
+'mapStateToProps',
+{{else}}
+null,
+{{/ifIn}}
+{{#ifIn 'mapDispatchToProps' connectedFunctions}}
+'mapDispatchToProps',
+{{else}}
+null,
+{{/ifIn}}
+)({{pascalCase name}}Component)
+{{else}}
+export default {{pascalCase name}}Component;
+{{/if}}

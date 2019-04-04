@@ -1,0 +1,9 @@
+---
+inject: true
+to: <%= cwd %>/src/state/saga.js
+after: "yield all\\(\\["
+---
+<%
+ SagaName = h.changeCase.camel(sagaName)
+%>
+    ...{{camelCase name}}.saga,

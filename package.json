@@ -1,0 +1,57 @@
+{
+  "license": "MIT",
+  "name": "goodz",
+  "description": "A generator for JS goodness",
+  "version": "0.0.1",
+  "author": "Goods & Services",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goods-services/goodz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goods-services/goodz/issues"
+  },
+  "homepage": "https://github.com/goods-services/goodz#readme",
+  "engines": {
+    "npm": ">=5",
+    "node": ">=8.10.0"
+  },
+  "bin": {
+    "goodz": "./bin/src.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5",
+    "inquirer-directory": "^2.1.0",
+    "plop": "^2.3.0",
+    "prettier": "^1.16.4",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4"
+  },
+  "tags": [
+    "React",
+    "plop",
+    "generators",
+    "components"
+  ],
+  "keywords": [
+    "plop generators",
+    "React Hooks",
+    "React generators"
+  ]
+}

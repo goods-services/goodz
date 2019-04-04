@@ -1,0 +1,9 @@
+---
+inject: true
+to: <%= cwd %>/src/state/saga.js
+after: "import { all } from 'redux-saga/effects';"
+---
+<%
+ SagaName = h.changeCase.camel(sagaName)
+%>
+import {{camelCase name}} from './{{camelCase name}}';

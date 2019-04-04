@@ -1,0 +1,37 @@
+{{#eq type 'Stateful'}}
+/**
+ * Component
+ */
+class {{pascalCase name}}Component extends React.Component {
+{{#if isConnected}}{{#each connectedFunctions}}{{#eq this 'componentWillReceiveProps'}}
+  /**
+  * {{this}}
+  */
+  {{this}}(){}
+  
+{{/eq}}{{/each}}{{/if}}
+{{#each requiredFunctions}}
+  /**
+  * {{this}}
+  * {{#eq func 'constructor'}}@param {object} props incoming props{{/eq}}
+  */
+  {{this}}({{#eq func 'constructor'}}props{{/eq}}){
+{{#eq func 'constructor'}}
+    super(props);
+{{/eq}}
+  }
+
+{{/each}}
+  /**
+  * render
+  * @returns {XML} The component
+  */
+  render() {
+    return (
+      <{{pascalCase name}}>
+        <p>{{pascalCase name}} Component</p>
+      </{{pascalCase name}}>
+    );
+  }
+}
+{{/eq}}

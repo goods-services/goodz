@@ -1,0 +1,33 @@
+{{#if isConnected}}
+{{#each connectedFunctions}}
+{{#eq this 'mapStateToProps'}}
+
+/**
+ * mapStateToProps
+ * @param {object} state incoming state
+ * @returns {object} Props from state
+ */
+const mapStateToProps = state => {
+  return {
+    todo: {}
+  }
+}
+{{/eq}}
+{{#eq this 'mapDispatchToProps'}}
+
+/**
+ * mapDispatchToProps
+ * @param {function} dispatch Redux dispatch function
+ * @returns {object} Props from dispatch
+ */
+const mapDispatchToProps = dispatch => {
+  return {
+    destroyTodo: () =>
+      dispatch({
+        type: 'DESTROY_TODO'
+      })
+  }
+}
+{{/eq}}
+{{/each}}
+{{/if}}
