@@ -1,9 +1,0 @@
----
-inject: true
-to: <%= cwd %>/src/state/store.js
-after: "combineReducers\\(\\{"
----
-<%
- SagaName = h.changeCase.camel(sagaName)
-%>
-  {{camelCase name}}: {{camelCase name}}.reducer,

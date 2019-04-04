@@ -1,9 +1,0 @@
----
-inject: true
-to: <%= cwd %>/src/state/store.js
-after: "import middleware from '\\.\\/middleware';"
----
-<%
- SagaName = h.changeCase.camel(sagaName)
-%>
-import {{camelCase name}} from './{{camelCase name}}';

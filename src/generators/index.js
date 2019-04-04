@@ -1,9 +1,11 @@
-const component = require('./component');
-const saga = require('./saga');
+const reactComponent = require('./react.comp');
+const reactSaga = require('./react.saga');
+const reactSite = require('./react.site');
 
 module.exports = {
   fecth: ({ dir }) => ([
-    component({ dir }),
-    saga({ dir }),
+    reactSite({ dir }),
+    reactComponent({ dir }),
+    reactSaga({ dir }),
   ])
 }
