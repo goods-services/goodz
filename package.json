@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "goodz",
-  "description": "A generator for JS goodness",
+  "description": "A command-line utility for generating goodness",
   "version": "0.0.1",
   "author": "Goods & Services",
   "repository": {
@@ -17,7 +17,7 @@
     "node": ">=8.10.0"
   },
   "bin": {
-    "goodz": "./bin/src.js"
+    "goodz": "./bin/goodz.js"
   },
   "files": [
     "bin",
@@ -47,11 +47,7 @@
     "React",
     "plop",
     "generators",
-    "components"
-  ],
-  "keywords": [
-    "plop generators",
-    "React Hooks",
-    "React generators"
+    "gatsby",
+    "redux"
   ]
 }
