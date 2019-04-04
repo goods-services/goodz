@@ -1,0 +1,62 @@
+{
+  "extends": "react-app",
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "rules": {
+    "semi": "off",
+    "camelcase": "warn",
+    "no-set-state": "off",
+    "no-useless-escape": "off",
+    "no-plusplus": "off",
+    "linebreak-style": "off",
+    "indent": ["error", 2],
+    "max-len": ["error", 120],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true
+        }
+      }
+    ],
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireReturn": false
+      }
+    ]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["lib", "./lib"],
+          ["atoms", "./src/components/atoms"],
+          ["molecules", "./src/components/molecules"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      },
+      "webpack": {
+        "config": {
+          "resolve": {
+            "modules": ["node_modules", "src/js", "lib"]
+          }
+        }
+      }
+    }
+  }
+}

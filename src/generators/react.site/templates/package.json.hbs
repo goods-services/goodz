@@ -1,0 +1,61 @@
+{
+  "name": "{{dashCase projectName}}",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    {{#if isRedux}}
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-act": "^1.7.4",
+    "redux-form": "^8.1.0",
+    "redux-saga": "^1.0.2",
+    {{/if}}
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "lint": "eslint --quiet --ignore-pattern node_modules --ignore-pattern bin --ignore-pattern public --parser babel-eslint  src/**/*",
+    "update-snapshots": "jest -u"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
+    "husky": "^1.3.1",
+    "prop-types": "^15.7.2",
+    {{#if isRedux}}
+    "redux-devtools-extension": "^2.13.8",
+    {{/if}}
+    "styled-components": "^4.2.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
+

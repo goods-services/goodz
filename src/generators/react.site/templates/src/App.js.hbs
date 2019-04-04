@@ -1,0 +1,40 @@
+import React, { Component } from 'react';
+{{#if isRedux}}
+import { Provider } from 'react-redux';
+
+import store from './state/store';
+import saga from './state/saga';
+import { sagaMiddleware } from './state/middleware';
+{{/if}}
+
+/**
+ * App
+ * @returns {XML} App
+ */
+class App extends Component {
+
+  /**
+   * 
+   * @returns {element} jsx
+   */
+  render() {
+    return (
+{{#if isRedux}}
+      <Provider store={store}>
+        <div className="App">
+          <h1>Hello World from {{projectName}}</h1>
+        </div>
+      </Provider>
+{{else}}
+      <div className="App">
+        <h1>Hello World from {{projectName}}</h1>
+      </div>
+{{/if}}
+    );
+  }
+}
+export default App;
+
+{{#if isRedux}}
+sagaMiddleware.run(saga);
+{{/if}}

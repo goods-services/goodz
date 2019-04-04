@@ -1,0 +1,19 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    "transform-react-jsx",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "~": "./node_modules",
+          "atoms": "./src/components/atoms",
+          "molecules": "./src/componsnts/molecules",
+          "lib": "./lib"
+        },
+        "cwd": "babelrc"
+      }
+    ]
+  ]
+}
