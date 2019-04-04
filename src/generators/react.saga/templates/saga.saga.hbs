@@ -1,0 +1,30 @@
+import { put, takeLatest } from 'redux-saga/effects';
+
+import actions from './{{camelCase name}}.actions';
+
+{{#if actionConstant}}
+/**
+ *
+ * @param {object} params Params
+ */
+function* {{camelCase actionConstant}}() {
+{{#if reducerConstant}}
+  yield put({
+    type: actions.{{reducerConstant}},
+    payload: {
+      test: '123',
+    },
+  });
+{{/if}}
+  return;
+}
+{{/if}}
+
+/**
+ *
+ */
+export default [
+{{#if actionConstant}}
+  takeLatest(actions.{{actionConstant}}, {{camelCase actionConstant}}),
+{{/if}}
+]
