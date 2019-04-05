@@ -46,7 +46,12 @@ Uses [Plop](https://github.com/amwmedia/plop) underneath... :raised_hands:
 
 ## Generators
 
-### React Site
+- [React App](#react-app)
+- [React Component](#react-component)
+- [React Saga](#react-saga)
+
+
+### <a id="react-app"></a>React App
 Generates a functional React app.  Based on [Create React App](https://github.com/facebook/create-react-app), but with some added goodness.
 ```
 $ goodz react.app
@@ -59,7 +64,7 @@ Should this react app have Redux? (Y/n)
 ```
 
 
-### React Component
+### <a id="react-component"></a>React Component
 Generates a react component inside your app, based on atomic design principles
 ```
 $ goodz react.component
@@ -98,7 +103,7 @@ choices: ["componentWillReceiveProps", "mapStateToProps", "mapDispatchToProps"]
 ```
 
 
-### React Saga
+### <a id="react-saga"></a>React Saga
 Generates a saga inside your Redux app
 ```
 $ goodz react.saga
