@@ -18,7 +18,7 @@ module.exports = ({ dir }) => ({
         type: "input",
         name: "actionConstant",
         message:
-          "Action Constant (e.g. COUNTER_INCREMENT, COUNTER_DECREMENT):"
+          "Action Constant (e.g. COUNTER_INCREMENT):"
       },{
         type: "input",
         name: "reducerConstant",

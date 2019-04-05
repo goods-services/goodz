@@ -12,7 +12,7 @@ module.exports = ({ dir }) => ({
       {
         type: "input",
         name: "name",
-        message: "Name of component? (ex: Button)"
+        message: "Name of component? (e.g. Button)"
       },
       {
         type: "list",
@@ -30,7 +30,7 @@ module.exports = ({ dir }) => ({
       {
         type: "confirm",
         name: "isConnected",
-        messge: "Should this component be connected?"
+        messge: "Should this component be connected to the redux store?"
       },
       {
         type: "checkbox",
