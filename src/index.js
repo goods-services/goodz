@@ -1,7 +1,6 @@
 // const promptDirectory = require('inquirer-directory');
 // const path = require('path');
 // const fs = require('fs');
-const { argv } = require('yargs');
 
 const helpers = require('./utils/helpers');
 const partials = require('./partials/index');
@@ -16,7 +15,7 @@ module.exports = plop => {
   partials.forEach(p => plop.setPartial(p.name, p.partial));
 
   // register generators
-  const dir = argv.dir || 'src';
+  const dir = process.env.DIR || 'src';
   const generatorList = generators.fecth({ dir });
   generatorList.forEach(g => plop.setGenerator(g.name, g.properties));
 };
