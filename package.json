@@ -24,14 +24,16 @@
     "src"
   ],
   "scripts": {
+    "precommit": "lint",
+    "lint": "eslint ./src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "cross-spawn": "^6.0.5",
-    "inquirer-directory": "^2.1.0",
+    "meow": "^5.0.0",
     "plop": "^2.3.0",
-    "prettier": "^1.16.4",
-    "yargs": "^13.2.2"
+    "prettier": "^1.16.4"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -43,11 +45,30 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4"
   },
-  "tags": [
-    "React",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "prettier",
+      "react",
+      "jsx-a11y"
+    ]
+  },
+  "eslintIgnore": [
+    "src/generators/react.site/templates/*"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
     "plop",
     "generators",
-    "gatsby",
-    "redux"
+    "react",
+    "redux",
+    "saga",
+    "styled components"
   ]
 }
