@@ -33,9 +33,9 @@ $ goodz --help
     $ goodz <name>   Run a generator of that name
 
   Options
-    -h, --help       Specify base path directory
+    -h, --help       Display the help screen
     -d, --dir        Specify base path directory
-    -v, --version    Specify base path directory
+    -v, --version    Display the version number
 
   Examples
     $ goodz react.component

@@ -15,9 +15,9 @@ ${chalk.bold('Usage')}
   $ goodz <name>   ${chalk.dim('Run a generator of that name')}
 
 ${chalk.bold('Options')}
-  -h, --help       ${chalk.dim('Specify base path directory')}
+  -h, --help       ${chalk.dim('Display the help screen')}
   -d, --dir        ${chalk.dim('Specify base path directory')}
-  -v, --version    ${chalk.dim('Specify base path directory')}
+  -v, --version    ${chalk.dim('Display the version number')}
 
 ${chalk.bold('Examples')}
   $ goodz react.component
