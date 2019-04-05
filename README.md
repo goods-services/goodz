@@ -53,10 +53,9 @@ $ goodz react.app
 ```
 #### Configuration
 "What is the name of your project?"
-
+--
 "Should this react app have Redux?" (Y/n)
-
-
+---
 ### React Component
 Generates a react component inside your app, based on atomic design principles
 ```
@@ -64,24 +63,25 @@ $ goodz react.component
 ```
 #### Configuration
 "Name of component?" (e.g. Button)
-
+--
 "Where should this component live?"
 choices: ["atoms", "molecules", "organisms", "templates"]
-
+--
 "Do you need a Stateless or Stateful component?"
 choices: ["Stateless", "Stateful"]
-
+--
 "Should this component be connected to the redux store?" (y/N)
-
+--
 "What functions would you like to include?"
 choices: ["constructor", "componentDidMount", "componentWillMount"]
-* statefull components only
-
+*statefull components only*
+--
 "What redux functions would you like to include?"
 choices: ["componentWillReceiveProps", "mapStateToProps", "mapDispatchToProps"]
-* connected components only
+*connected components only*
 
 #### Output
+```
   └── src      
       └── components                
           └── atoms
@@ -91,7 +91,8 @@ choices: ["componentWillReceiveProps", "mapStateToProps", "mapDispatchToProps"]
                   |── index.js             - For easy reference
                   └── __tests__
                       └── Button.test.js   - Jest unit test file
-
+```
+---
 ### React Saga
 Generates a saga inside your Redux app
 ```
@@ -99,12 +100,13 @@ $ goodz react.saga
 ```
 #### Configuration
 "Saga Name" (e.g. counter)
-
+--
 "Action Constant" (e.g. COUNTER_INCREMENT)
-
+--
 "Reducer Constant" (e.g. COUNTER_CHANGED)
 
 #### Output
+```
   └── src      
       └── state                
         |── middleware.js
@@ -115,7 +117,8 @@ $ goodz react.saga
           |── counter.reducer.js
           |── counter.saga.js
           └── index.js
-
+```
+---
 ## FAQ
 
 #### Why did you make this?
