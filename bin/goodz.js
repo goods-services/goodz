@@ -7,6 +7,7 @@ process.on('unhandledRejection', err => {
 const spawn = require('cross-spawn');
 const meow = require('meow');
 const chalk = require('chalk');
+const path = require('path');
 
 const cli = meow(`
 ${chalk.bold('Usage')}
@@ -45,7 +46,7 @@ if(options.dir) {
 
 const commandArgs = process.argv.slice(2);
 const plopArgs = ['--plopfile', require.resolve('../src/index.js')];
-const result = spawn.sync('plop', plopArgs.concat(commandArgs), {
+const result = spawn.sync(path.join(__dirname, '../', 'node_modules/plop/src/plop.js'), plopArgs.concat(commandArgs), {
   stdio: 'inherit'
 });
 
