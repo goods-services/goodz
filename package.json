@@ -2,7 +2,7 @@
   "license": "MIT",
   "name": "goodz",
   "description": "A command-line utility for generating goodness",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Goods & Services",
   "repository": {
     "type": "git",
