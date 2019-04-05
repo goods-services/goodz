@@ -41,7 +41,7 @@ $ goodz --help
     $ goodz react.component
     $ goodz react.component --dir app
 ```
-Uses [Plop](https://github.com/amwmedia/plop) underneath... :raised_hands:
+Uses [Plop](https://github.com/amwmedia/plop) and [Inquirer](https://github.com/SBoudrias/Inquirer.js) underneath... :raised_hands:
 
 
 ## Generators
@@ -140,7 +140,6 @@ Everyone deserves some goodness from time to time.
 
 ## Related
 
-- [Plop](https://github.com/amwmedia/plop) - Credits to the plop team for building a great generator tool.
 - [Create React App](https://github.com/facebook/create-react-app) - Set up a modern web app by running one command.
 - [Redux](https://github.com/reduxjs/redux) - A predictable state container for JavaScript apps.
 - [Redux Saga](https://github.com/redux-saga/redux-saga/) - An alternative side effect model for Redux apps.
