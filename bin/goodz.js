@@ -39,7 +39,9 @@ ${chalk.bold('Examples')}
 });
 
 const {flags: options} = cli;
-process.env.DIR = options.dir || null;
+if(options.dir) {
+  process.env.DIR = options.dir
+}
 
 const commandArgs = process.argv.slice(2);
 const plopArgs = ['--plopfile', require.resolve('../src/index.js')];
