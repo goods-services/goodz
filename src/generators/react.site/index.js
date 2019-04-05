@@ -13,7 +13,11 @@ module.exports = ({ dir }) => ({
       {
         type: "input",
         name: "projectName",
-        message: "What is the name of your project?"
+        message: "What is the name of your project?",
+        validate: value => {
+          if (/.+/.test(value)) return true;
+          return 'Project name is required';
+        },
       },
       {
         type: "confirm",
@@ -35,7 +39,9 @@ module.exports = ({ dir }) => ({
       ] : [];
     
       return [
-        actions.add(`${pathPrefix}.babelrc`, filePath('.babelrc')),
+        actions.add(`${pathPrefix}.babelrc`, filePath('.babelrc'), {
+          abortOnFail: true,
+        }),
         actions.add(`${pathPrefix}.eslintrc`, filePath('.eslintrc')),
         actions.add(`${pathPrefix}.gitignore`, filePath('.gitignore')),
         actions.add(`${pathPrefix}.prettierrc`, filePath('.prettierrc')),

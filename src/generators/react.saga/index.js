@@ -12,7 +12,11 @@ module.exports = ({ dir }) => ({
       {
         type: "input",
         name: "name",
-        message: "Saga Name (e.g. counter):"
+        message: "Saga Name (e.g. counter):",
+        validate: value => {
+          if (/.+/.test(value)) return true;
+          return 'Saga name is required';
+        },
       },
       {
         type: "input",

@@ -12,7 +12,11 @@ module.exports = ({ dir }) => ({
       {
         type: "input",
         name: "name",
-        message: "Name of component? (e.g. Button)"
+        message: "Name of component? (e.g. Button)",
+        validate: value => {
+          if (/.+/.test(value)) return true;
+          return 'Component name is required';
+        },
       },
       {
         type: "list",
@@ -67,22 +71,26 @@ module.exports = ({ dir }) => ({
         {
           type: 'add',
           path: filePath(`components/${componentFolder}/${componentName}/index.js`),
-          templateFile: `${pathPrefix}index.hbs`
+          templateFile: `${pathPrefix}index.hbs`,
+          abortOnFail: true,
         },
         {
           type: 'add',
           path: filePath(`components/${componentFolder}/${componentName}/${componentName}.js`),
-          templateFile: `${pathPrefix}component.hbs`
+          templateFile: `${pathPrefix}component.hbs`,
+          abortOnFail: true,
         },
         {
           type: 'add',
           path: filePath(`components/${componentFolder}/${componentName}/${componentName}.style.js`),
-          templateFile: `${pathPrefix}componentStyle.hbs`
+          templateFile: `${pathPrefix}componentStyle.hbs`,
+          abortOnFail: true,
         },
         {
           type: 'add',
           path: filePath(`components/${componentFolder}/${componentName}/__tests__/${componentName}.test.js`),
-          templateFile: `${pathPrefix}componentTest.hbs`
+          templateFile: `${pathPrefix}componentTest.hbs`,
+          abortOnFail: true,
         },
       ];
     },
