@@ -43,7 +43,7 @@ module.exports = ({ dir }) => ({
           abortOnFail: true,
         }),
         actions.add(`${pathPrefix}.eslintrc`, filePath('.eslintrc')),
-        actions.add(`${pathPrefix}.gitignore`, filePath('.gitignore')),
+        actions.add(`${pathPrefix}.gitignore.hbs`, filePath('.gitignore')),
         actions.add(`${pathPrefix}.prettierrc`, filePath('.prettierrc')),
         actions.add(`${pathPrefix}src/index.js.hbs`, filePath('/src/index.js')),
         actions.add(`${pathPrefix}src/App.js.hbs`, filePath('/src/App.js')),
