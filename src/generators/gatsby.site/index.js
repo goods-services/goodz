@@ -24,11 +24,8 @@ module.exports = ({ dir }) => ({
       const filePath = pathGen(dir !== 'src' ? dir : '/');
     
       return [
-        actions.add(`${pathPrefix}.babelrc`, filePath('.babelrc'), {
-          abortOnFail: false,
-        }),
         actions.add(`${pathPrefix}.eslintrc`, filePath('.eslintrc')),
-        actions.add(`${pathPrefix}.gitignore`, filePath('.gitignore')),
+        actions.add(`${pathPrefix}.gitignore.hbs`, filePath('.gitignore')),
         actions.add(`${pathPrefix}gatsby-browser.js`, filePath('gatsby-browser.js')),
         actions.add(`${pathPrefix}gatsby-config.js`, filePath('gatsby-config.js')),
         actions.add(`${pathPrefix}gatsby-node.js`, filePath('gatsby-node.js')),
