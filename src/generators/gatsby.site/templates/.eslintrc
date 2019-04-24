@@ -1,0 +1,56 @@
+{
+  "extends": "react-app",
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "rules": {
+    "semi": "off",
+    "camelcase": "warn",
+    "no-set-state": "off",
+    "no-useless-escape": "off",
+    "no-plusplus": "off",
+    "linebreak-style": "off",
+    "indent": ["error", 2],
+    "max-len": ["error", 120],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": false,
+          "MethodDefinition": false,
+          "ClassDeclaration": false,
+          "ArrowFunctionExpression": false
+        }
+      }
+    ],
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireReturn": false
+      }
+    ],
+    "no-implicit-dependencies": [
+      true,
+      [
+        "@components",
+        "@atoms",
+        "@molecuels",
+        "@organisms",
+        "@styledcomponents",
+        "@styles",
+        "@utils",
+        "@icons"
+      ]
+    ]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  }
+}
