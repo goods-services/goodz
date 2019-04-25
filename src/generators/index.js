@@ -3,6 +3,7 @@ const reactSaga = require('./react.saga');
 const reactSite = require('./react.site');
 const gatsbySite = require('./gatsby.site');
 const gatsbyPage = require('./gatsby.page');
+const gatsbyTemplate = require('./gatsby.template');
 
 module.exports = {
   fecth: ({ dir }) => ([
@@ -11,5 +12,6 @@ module.exports = {
     reactSaga({ dir }),
     gatsbySite({dir}),
     gatsbyPage({dir}),
+    gatsbyTemplate({dir}),
   ])
 }

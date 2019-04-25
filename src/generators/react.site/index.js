@@ -22,7 +22,7 @@ module.exports = ({ dir }) => ({
       {
         type: "confirm",
         name: "isRedux",
-        messge: "Should this react app have Redux?"
+        message: "Should this react app have Redux?"
       },
     ],
     actions: data => {
