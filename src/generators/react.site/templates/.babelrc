@@ -9,7 +9,7 @@
         "alias": {
           "~": "./node_modules",
           "atoms": "./src/components/atoms",
-          "molecules": "./src/componsnts/molecules",
+          "molecules": "./src/components/molecules",
           "lib": "./lib"
         },
         "cwd": "babelrc"
