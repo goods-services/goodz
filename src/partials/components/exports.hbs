@@ -3,12 +3,12 @@ export { {{pascalCase name}} as {{pascalCase name}}Vanlla };
 {{#if isConnected}}
 export default connect(
 {{#ifIn 'mapStateToProps' connectedFunctions}}
-'mapStateToProps',
+mapStateToProps,
 {{else}}
 null,
 {{/ifIn}}
 {{#ifIn 'mapDispatchToProps' connectedFunctions}}
-'mapDispatchToProps',
+mapDispatchToProps,
 {{else}}
 null,
 {{/ifIn}}
