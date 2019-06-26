@@ -1,5 +1,18 @@
+{{#eq styleType 'Styled Components'}}
 import styled from 'styled-components';
 
 export const {{pascalCase name}} = styled.div`
 
 `;
+{{/eq}}
+{{#eq styleType 'Material Design'}}
+
+import { styled } from '@material-ui/core/styles';
+
+import { Box} from '@material-ui/core';
+
+export const {{pascalCase name}} = styled(Box)({
+
+});
+
+{{/eq}}
