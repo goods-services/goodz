@@ -26,6 +26,13 @@ module.exports = ({ dir }) => ({
       },
       {
         type: "list",
+        name: "styleType",
+        message: "Do you need Styled Components or Material Design?",
+        choices: ["Styled Components", "Material Design"],
+        default: 0,
+      },
+      {
+        type: "list",
         name: "type",
         message: "Do you need a Stateless or Stateful component?",
         choices: ["Stateless", "Stateful"],
