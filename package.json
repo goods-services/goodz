@@ -1,8 +1,8 @@
 {
   "license": "MIT",
   "name": "goodz",
-  "description": "A command-line utility for generating goodness",
-  "version": "1.0.6",
+  "description": "A command-line utility for generating goodness for your react and gatsby apps",
+  "version": "1.1.0",
   "author": "Goods & Services",
   "repository": {
     "type": "git",
@@ -69,6 +69,8 @@
     "react",
     "redux",
     "saga",
-    "styled components"
+    "styled components",
+    "gatsby",
+    "material-ui"
   ]
 }
