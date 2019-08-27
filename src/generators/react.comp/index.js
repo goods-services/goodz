@@ -28,7 +28,7 @@ module.exports = ({ dir }) => ({
         type: "list",
         name: "styleType",
         message: "Do you need Styled Components or Material Design?",
-        choices: ["Styled Components", "Material Design"],
+        choices: ["Styled Components", "Material Design", "SCSS"],
         default: 0,
       },
       {
@@ -71,10 +71,9 @@ module.exports = ({ dir }) => ({
     ],
     actions: data => {
       const filePath = pathGen(dir);
-      const { componentFolder } = data;
+      const { componentFolder, styleType } = data;
       const componentName = '{{pascalCase name}}';
-    
-      return [
+      const arr = [
         {
           type: 'add',
           path: filePath(`components/${componentFolder}/${componentName}/index.js`),
@@ -89,17 +88,27 @@ module.exports = ({ dir }) => ({
         },
         {
           type: 'add',
-          path: filePath(`components/${componentFolder}/${componentName}/${componentName}.style.js`),
-          templateFile: `${pathPrefix}componentStyle.hbs`,
-          abortOnFail: true,
-        },
-        {
-          type: 'add',
           path: filePath(`components/${componentFolder}/${componentName}/__tests__/${componentName}.test.js`),
           templateFile: `${pathPrefix}componentTest.hbs`,
           abortOnFail: true,
         },
       ];
+      if (styleType === "SCSS") {
+        arr.push({
+          type: 'add',
+          path: filePath(`components/${componentFolder}/${componentName}/${componentName}.scss`),
+          templateFile: `${pathPrefix}componentStyle.hbs`,
+          abortOnFail: true,
+        })
+      } else {
+        arr.push({
+          type: 'add',
+          path: filePath(`components/${componentFolder}/${componentName}/${componentName}.style.js`),
+          templateFile: `${pathPrefix}componentStyle.hbs`,
+          abortOnFail: true,
+        })
+      }
+      return arr;
     },
   }
 });

@@ -2,5 +2,12 @@ import React from 'react';
 {{#if isConnected}}
 import { connect } from 'react-redux';
 {{/if}}
-
+{{#eq styleType 'SCSS'}}
+import  './{{pascalCase name}}.scss';
+{{/eq}}
+{{#eq styleType 'Material Design'}}
 import { {{pascalCase name}} } from './{{pascalCase name}}.style';
+{{/eq}}
+{{#eq styleType 'Styled Components'}}
+import { {{pascalCase name}} } from './{{pascalCase name}}.style';
+{{/eq}}

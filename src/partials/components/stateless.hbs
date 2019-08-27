@@ -5,8 +5,25 @@
  * @returns {XML} Component
  */
 const {{pascalCase name}}Component = ({  }) => (
+{{#eq styleType 'SCSS'}}
+  <div>
+{{/eq}}
+{{#eq styleType 'Styled Components'}}
   <{{pascalCase name}}>
+
+{{/eq}}
+{{#eq styleType 'Material design'}}
+  <{{pascalCase name}}>
+{{/eq}}
     <p>{{pascalCase name}} Component</p>
+{{#eq styleType 'SCSS'}}
+  </div>
+{{/eq}}
+{{#eq styleType 'Styled Components'}}
   </{{pascalCase name}}>
+{{/eq}}
+{{#eq styleType 'Material design'}}
+  </{{pascalCase name}}>
+{{/eq}}
 );
 {{/eq}}
