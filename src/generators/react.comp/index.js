@@ -27,7 +27,7 @@ module.exports = ({ dir }) => ({
       {
         type: "list",
         name: "styleType",
-        message: "Do you need Styled Components or Material Design?",
+        message: "Do you need Styled Components, Material Design, or SCSS?",
         choices: ["Styled Components", "Material Design", "SCSS"],
         default: 0,
       },

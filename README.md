@@ -86,6 +86,9 @@ Name of component?" (e.g. Button)
 Where should this component live?
 choices: ["atoms", "molecules", "organisms", "templates"]
 
+Do you need Styled Components, Material Design, or SCSS?",
+choices: ["Styled Components", "Material Design", "SCSS"]
+
 Do you need a Stateless or Stateful component?
 choices: ["Stateless", "Stateful"]
 
