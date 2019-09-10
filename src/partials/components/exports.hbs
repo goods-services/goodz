@@ -1,5 +1,9 @@
-
+{{#eq styleType 'Styled Components'}}
 export { {{pascalCase name}} as {{pascalCase name}}Vanlla };
+{{/eq}}
+{{#eq styleType 'Material Design'}}
+export { {{pascalCase name}} as {{pascalCase name}}Vanlla };
+{{/eq}}
 {{#if isConnected}}
 export default connect(
 {{#ifIn 'mapStateToProps' connectedFunctions}}

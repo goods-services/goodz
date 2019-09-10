@@ -28,9 +28,27 @@ class {{pascalCase name}}Component extends React.Component {
   */
   render() {
     return (
+{{#eq styleType 'SCSS'}}
+      <div>
+{{/eq}}
+{{#eq styleType 'Styled Components'}}
       <{{pascalCase name}}>
+
+{{/eq}}
+{{#eq styleType 'Material design'}}
+      <{{pascalCase name}}>
+{{/eq}}
         <p>{{pascalCase name}} Component</p>
-      </{{pascalCase name}}>
+{{#eq styleType 'SCSS'}}
+      </div>
+{{/eq}}
+{{#eq styleType 'Styled Components'}}
+     </{{pascalCase name}}>
+
+{{/eq}}
+{{#eq styleType 'Material design'}}
+     </{{pascalCase name}}>
+{{/eq}}
     );
   }
 }
